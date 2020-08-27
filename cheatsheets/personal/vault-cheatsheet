@@ -1,0 +1,35 @@
+# Start the server in DEV mode
+vault server -dev
+
+# Write key value pair
+vault write secret/<name of secret> <data kv pairs>
+
+# Read secret
+vault read secret/<name of secret>
+
+# Read secret as JSON
+vault read -format=json secret/<name of secret>
+
+# Delete secret
+vault delete secret/<name of secret>
+
+# Mount backend
+vault mount kv
+
+# List mounts
+vault mounts
+
+# Unmount 
+vault unmount kv
+
+# Mount aws back-end
+vault mount aws
+
+# Create token
+vault token-create
+
+# Revoke token
+vault token-revoke
+
+# Authenticate
+vault auth <token>
